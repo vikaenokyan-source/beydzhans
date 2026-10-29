@@ -14,7 +14,7 @@ body::before {
   opacity: var(--texture-opacity);
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1.4 -0.2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
-h1, h2, h3, h4 { color: var(--color-ink); text-transform: uppercase; line-height: 1.1; }
+h1, h2, h3, h4 { color: var(--color-ink); text-transform: uppercase; line-height: 1.16; }
 h4 { margin: 0; font-family: var(--font-display); font-weight: 700; font-size: var(--text-lg); line-height: 1.1; overflow-wrap: break-word; min-width: 0; }
 ul, ol, dl, dd, figure, blockquote { margin: 0; padding: 0; }
 ul, ol { list-style: none; }
@@ -75,7 +75,9 @@ a { color: var(--color-ink); }
 /* ---------- hero: Stage ---------- */
 .hero { padding-block: var(--space-2xl) var(--space-2xl); min-height: calc(100svh - var(--nav-height)); display: grid; align-items: center; }
 .hero__grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: var(--space-2xl); align-items: center; }
-.hero__title { font-size: clamp(2.5rem, 5.2vw, 6rem); line-height: 1.06; max-width: none; }
+.hero__text { container-type: inline-size; min-width: 0; }
+/* sized by its own column, not the window: the longest word, «Ленинградке,», is about 6.4em wide in Oswald */
+.hero__title { font-size: clamp(2.5rem, 15cqi, 6rem); line-height: 1.06; max-width: none; }
 .hero__lead { margin-top: var(--space-lg); color: var(--color-ink-2); max-width: 30ch; }
 .hero__actions { display: flex; flex-wrap: wrap; gap: var(--space-md); margin-top: var(--space-xl); }
 .hero__visual { position: relative; margin: 0; }
