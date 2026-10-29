@@ -1,0 +1,38 @@
+[
+ {
+  "shape": "Narrative Workflow",
+  "theme": "formwork",
+  "axes": "mid/display-condensed/warm",
+  "hero": "Stage",
+  "nav": "slab",
+  "footer": "colophon block",
+  "imagery": "photographs, library 5, warm (stand-ins)",
+  "photos": [
+   "Matcha_tea_latte_with_rosetta_latte_art.jpg",
+   "Cóctel_de_café_en_copa_martini_2.jpg",
+   "Almond_croissant_-_Workshop_Coffee_Lab_2025-06-27.jpg",
+   "Castella_002.jpg",
+   "Roasted_coffee_beans_on_the_surface._01.jpg"
+  ],
+  "entry": "index.html",
+  "fingerprint": "night pour, neon accent, cast menu, curtain band",
+  "sections": [
+   "Hero",
+   "Split+Switcher",
+   "Steps (day stages: rows, table, rail)",
+   "Table by size (odometer)",
+   "Statement (neon) + dl",
+   "Offer",
+   "Band (curtain): table + quotes",
+   "Visit three panels",
+   "Footer"
+  ],
+  "signature": "menu prices roll when switching 200/400/600 ml",
+  "waived": [
+   "29"
+  ],
+  "prompt": "Сайт для кофейни Бейджанс в Москве",
+  "date": "2026-10-29",
+  "mode": "build"
+ }
+]
