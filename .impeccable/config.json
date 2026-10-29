@@ -1,0 +1,17 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "flat-type-hierarchy",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-29T15:12:14.743Z",
+        "reason": "Claude verified: rendered sizes at 1440 are h1 81px, h2 64px, stage h3 60px, item h3 26px, lead 21px, body 16px; every role step is 1.25x or more, the static scan cannot resolve the clamp() tokens"
+      }
+    ]
+  }
+}
