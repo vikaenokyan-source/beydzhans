@@ -4,16 +4,17 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Бейджанс, кофейня на Ленинградском проспекте, 13</title>
-  <meta name="description" content="Кофейня у метро «Белорусская»: авторские напитки к премьерам, фильтр каждую неделю, завтраки с 7:30 и выпечка до 22:00.">
-  <meta name="theme-color" content="#2a2622">
+  <meta name="description" content="Кофейня у метро «Белорусская»: бетон, бархат и неон, авторские напитки к премьерам, завтраки с 7:30 и выпечка до 22:00.">
+  <meta name="theme-color" content="#dcdee1">
   <meta property="og:title" content="Бейджанс, кофейня на Ленинградском проспекте, 13">
-  <meta property="og:description" content="Авторские напитки к премьерам, фильтр каждую неделю, завтраки с 7:30 и выпечка до 22:00.">
+  <meta property="og:description" content="Бетон, бархат и неон. Авторские напитки к премьерам, завтраки с 7:30 и выпечка до 22:00.">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="ru_RU">
-  <meta property="og:image" content="https://beydzhans.vercel.app/images/matcha-1280.jpg">
+  <meta property="og:image" content="https://beydzhans.vercel.app/images/og.jpg">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="preload" href="fonts/oswald-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/dela-gothic-one-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/golos-text-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="images/place/wall.webp" as="image" fetchpriority="high">
   <link rel="stylesheet" href="fonts/fonts.css">
   <link rel="stylesheet" href="styles.css">
   <script type="application/ld+json">
@@ -33,235 +34,141 @@
     "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5.0", "ratingCount": "386" }
   }
   </script>
+  <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
   <a class="skip" href="#main">К содержимому</a>
 
-  <header class="nav" id="top">
+  <header class="nav" id="top" data-nav>
     <div class="container nav__row">
-      <a class="nav__mark" href="#top" aria-label="Бейджанс, наверх">Бейджанс</a>
+      <a class="wordmark nav__mark" href="#top" aria-label="Бейджанс, наверх">Бейджанс</a>
       <nav class="nav__links" aria-label="Разделы">
-        <a href="#signature">Авторское</a>
-        <a href="#day">День</a>
-        <a href="#menu">Меню</a>
-        <a href="#shelf">Полка</a>
-        <a href="#visit">Как добраться</a>
+        <a class="ulink" href="#menu">Меню</a>
+        <a class="ulink" href="#hall">Зал</a>
+        <a class="ulink" href="#reviews">Отзывы</a>
+        <a class="ulink" href="#visit">Как добраться</a>
       </nav>
       <details class="nav__more">
         <summary>Разделы</summary>
         <nav class="nav__drop" aria-label="Разделы, компактно">
-          <a href="#signature">Авторское</a>
-          <a href="#day">День</a>
           <a href="#menu">Меню</a>
-          <a href="#shelf">Полка</a>
+          <a href="#hall">Зал</a>
+          <a href="#reviews">Отзывы</a>
           <a href="#visit">Как добраться</a>
         </nav>
       </details>
       <p class="nav__status" role="status" data-status>Ежедневно до 22:00</p>
-      <a class="nav__action" href="https://yandex.ru/maps/?rtext=~55.781039%2C37.573600&amp;rtt=pd" target="_blank" rel="noopener">Маршрут</a>
+      <a class="btn btn--primary btn--small nav__action" href="https://yandex.ru/maps/?rtext=~55.781039%2C37.573600&amp;rtt=pd" target="_blank" rel="noopener"><span>Маршрут</span></a>
     </div>
   </header>
 
   <main id="main">
-    <!-- Hero: Stage. The drink is the picture; the address is the headline. -->
+    <!-- Hero: the salon wall, hung on load. -->
     <section class="hero" aria-labelledby="hero-title">
       <div class="container hero__grid">
         <div class="hero__text">
-          <h1 id="hero-title" class="hero__title" data-settle>Кофе на Ленинградке, 13</h1>
-          <p class="lead hero__lead" data-settle>Авторские напитки к премьерам, фильтр каждую неделю и выпечка до&nbsp;22:00.</p>
-          <div class="hero__actions" data-settle>
-            <a class="btn btn--primary" href="https://yandex.ru/maps/?rtext=~55.781039%2C37.573600&amp;rtt=pd" target="_blank" rel="noopener">Построить маршрут</a>
-            <a class="btn btn--secondary" href="#menu">Смотреть меню</a>
+          <h1 id="hero-title" class="hero__title"><span class="line" data-rise>Кофе,</span> <span class="line" data-rise>неон</span> <span class="line" data-rise>и&nbsp;бархат</span></h1>
+          <p class="lead hero__lead" data-rise>Ленинградский проспект, 13. Авторские напитки к&nbsp;премьерам и&nbsp;выпечка до&nbsp;22:00.</p>
+          <div class="hero__actions" data-rise>
+            <a class="btn btn--primary" href="https://yandex.ru/maps/?rtext=~55.781039%2C37.573600&amp;rtt=pd" target="_blank" rel="noopener"><span>Построить маршрут</span></a>
+            <a class="btn btn--quiet" href="#menu"><span>Открыть меню</span></a>
           </div>
         </div>
-        <figure class="hero__visual">
-          <div class="photo photo--hero" data-slot="hero" data-alt="Фирменный напиток Бейджанса в стакане с логотипом на бетонной стойке, вечерний свет, розовый неон на фоне">
-            <img src="images/matcha-1280.webp" srcset="images/matcha-1280.webp 1280w, images/matcha-1920.webp 1920w" sizes="(min-width: 60rem) 56vw, 100vw" width="1920" height="1080" alt="Матча латте с латте-артом в чёрной чашке" style="object-position: 46% 50%" fetchpriority="high">
-          </div>
-          <figcaption class="hero__plate">
-            <span class="hero__score num">5,0</span>
+        <div class="salon" role="group" aria-label="Стена зала">
+          <figure class="frame frame--canvas salon__a" style="--i:0; --rest:-1.2deg">
+            <img src="images/place/wall.webp" width="723" height="1280" alt="Стена зала: постеры в рамах, неоновая чашка, кресла, пуфы и терракотовая штора" fetchpriority="high">
+          </figure>
+          <figure class="frame frame--ply salon__b" style="--i:1; --rest:1.6deg">
+            <img src="images/place/bookshelf.webp" width="853" height="1280" alt="Полка из фанеры с книгами, игрушечной белкой и постером маяка" loading="lazy">
+          </figure>
+          <figure class="frame frame--canvas salon__c" style="--i:2; --rest:-2deg">
+            <img src="images/place/xp-sign.webp" width="908" height="1280" alt="Световая табличка What doesn't kill you gives you XP" loading="lazy">
+          </figure>
+          <p class="salon__label" style="--i:3">
+            <span class="salon__score num">5,0</span>
             <span>386 оценок на Яндекс Картах, награда «Хорошее место 2026»</span>
-          </figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <!-- Signature: the author's card, coffee and tea. -->
-    <section class="sig" id="signature" aria-labelledby="sig-title">
-      <div class="container sig__grid">
-        <figure class="sig__visual">
-          <div class="photo photo--tall" data-slot="signature" data-alt="Раф «Мисо-медовик» в прозрачном стакане, сырная пенка, тёмный бетон, сбоку зебровое кресло">
-            <img src="images/coupe-1280.webp" width="1280" height="1265" alt="Кофейный напиток со сливочной пенкой на тёмном фоне" loading="lazy" style="object-position: 50% 45%">
-          </div>
-        </figure>
-        <div class="sig__body">
-          <h2 id="sig-title">Мисо, барбарис, лимонный тарт</h2>
-          <p class="lead sig__lead">Авторская карта меняется вместе с сезоном, а к премьерам фильмов и сериалов бариста придумывают отдельное меню.</p>
-
-          <div class="switch" data-switch>
-            <div class="tabs" role="tablist" aria-label="Авторское меню">
-              <button type="button" class="tab" role="tab" id="sig-t1" aria-controls="sig-p1" aria-selected="true">Кофе</button>
-              <button type="button" class="tab" role="tab" id="sig-t2" aria-controls="sig-p2" aria-selected="false" tabindex="-1">Чай</button>
-            </div>
-            <div class="tabpanel" role="tabpanel" tabindex="0" id="sig-p1" aria-labelledby="sig-t1">
-              <ul class="dishes">
-                <li><h3>Раф «Мисо-медовик»</h3><p>Гречишный мёд, карамель и солоноватая нота мисо.</p><span class="dishes__price num">490&nbsp;₽</span></li>
-                <li><h3>Капучино «Лимонный тарт»</h3><p>Лимонная кислинка, апельсин и нежная сырная пенка.</p><span class="dishes__price num">490&nbsp;₽</span></li>
-                <li><h3>Раф «Тыквенный пай с барбарисом»</h3><p>Пряная тыква, корица, сливочная пенка и барбарис.</p><span class="dishes__price num">445&nbsp;₽</span></li>
-                <li><h3>Латте «Мисо-арахис»</h3><p>Насыщенный арахис, мисо и медовая сладость.</p><span class="dishes__price num">445&nbsp;₽</span></li>
-                <li><h3>Латте «Кантри», с протеином</h3><p>Вкус сгущёнки, сырная пенка и хрустящие рисовые шарики.</p><span class="dishes__price num">490&nbsp;₽</span></li>
-                <li><h3>Горячий Бамбл-би, апельсин</h3><p>Кофе на апельсиновом соке с карамельной ноткой.</p><span class="dishes__price num">475&nbsp;₽</span></li>
-                <li><h3>Горячий Бамбл-би, вишня</h3><p>Кофе на вишнёвом соке с натуральным пюре вишни.</p><span class="dishes__price num">415&nbsp;₽</span></li>
-              </ul>
-            </div>
-            <div class="tabpanel" role="tabpanel" tabindex="0" id="sig-p2" aria-labelledby="sig-t2">
-              <ul class="dishes">
-                <li><h3>Ходзича латте «Медово-ореховый тарт»</h3><p>Ореховые ноты, мёд, карамель и сырная пенка.</p><span class="dishes__price num">490&nbsp;₽</span></li>
-                <li><h3>«Осенний лес»</h3><p>Брусника, яблоко и мёд под яблочной пенкой.</p><span class="dishes__price num">395&nbsp;₽</span></li>
-                <li><h3>«Яблочная шарлотка»</h3><p>Чёрный чай со вкусом печёного яблока и карамели.</p><span class="dishes__price num">395&nbsp;₽</span></li>
-                <li><h3>«Пряный грейпфрут»</h3><p>Грейпфрут, мёд и имбирь.</p><span class="dishes__price num">395&nbsp;₽</span></li>
-                <li><h3>«Малина-тайга»</h3><p>Ягодный чай с оттенком таёжных трав.</p><span class="dishes__price num">395&nbsp;₽</span></li>
-                <li><h3>Облепиховый</h3><p>На облепиховом пюре.</p><span class="dishes__price num">395&nbsp;₽</span></li>
-                <li><h3>Матча латте</h3><p>Японская матча со вспененным молоком, 400 или 600 мл.</p><span class="dishes__price num">395&nbsp;₽</span></li>
-              </ul>
-            </div>
-          </div>
-          <p class="note">Все напитки авторской карты 400 мл. Альтернативное молоко ALPRO: кокосовое, банановое, миндальное или безлактозное.</p>
+          </p>
         </div>
       </div>
     </section>
 
-    <!-- The day: three stages from opening to closing. -->
-    <section class="day" id="day" aria-labelledby="day-title">
-      <div class="container">
-        <h2 id="day-title" class="day__title">Один день на Ленинградке</h2>
-        <ol class="stages" data-reveal>
-          <li class="stage stage--morning">
-            <div class="stage__text">
-              <h3 class="stage__head">Утро с&nbsp;7:30</h3>
-              <p class="stage__line">По выходным открываемся в 8:00. Сырники, каши и блины к первой чашке.</p>
-              <ul class="rows">
-                <li><span>Ванильные сырники, сметана и малина</span><span class="rows__meta num">175 г</span><span class="num">325&nbsp;₽</span></li>
-                <li><span>Творожная запеканка со сметаной и малиной</span><span class="rows__meta num">230 г</span><span class="num">325&nbsp;₽</span></li>
-                <li><span>Омлет с ветчиной и сыром</span><span class="rows__meta num">200 г</span><span class="num">350&nbsp;₽</span></li>
-                <li><span>Рисовая каша на кокосовом молоке</span><span class="rows__meta num">285 г</span><span class="num">289&nbsp;₽</span></li>
-                <li><span>Овсяная каша на молоке</span><span class="rows__meta num">285 г</span><span class="num">240&nbsp;₽</span></li>
-                <li><span>Блины с творогом и бананом</span><span class="rows__meta num">215 г</span><span class="num">415&nbsp;₽</span></li>
-                <li><span>Блины с мясом</span><span class="rows__meta num">210 г</span><span class="num">460&nbsp;₽</span></li>
-                <li><span>Брекфаст ролл с омлетом, ветчиной и двумя сырами</span><span class="rows__meta num">185 г</span><span class="num">385&nbsp;₽</span></li>
-              </ul>
-            </div>
-            <figure class="stage__visual">
-              <div class="photo photo--square" data-slot="morning" data-alt="Ванильные сырники со сметаной и малиной и капучино на деревянном столе, утренний свет из окна">
-                <img src="images/croissant-1280.webp" width="1280" height="964" alt="Миндальный круассан в сахарной пудре" loading="lazy" style="object-position: 50% 55%">
-              </div>
-              <figcaption class="caption">Круассан миндальный, 150 г, 335 ₽</figcaption>
-            </figure>
-          </li>
-
-          <li class="stage stage--noon">
-            <div class="stage__intro">
-              <h3 class="stage__head">Обед</h3>
-              <p class="stage__line">Горячее, сэндвичи на бриоши и салаты, всё можно забрать с собой.</p>
-            </div>
-            <div class="table-wrap">
-              <table class="menu-table">
-                <caption class="visually-hidden">Обед: горячее, сэндвичи и салаты</caption>
-                <thead><tr><th scope="col">Блюдо</th><th scope="col" class="num">Вес</th><th scope="col" class="num">Цена</th></tr></thead>
-                <tbody>
-                  <tr><th scope="row">Шницель с пюре из батата</th><td class="num">260 г</td><td class="num">495&nbsp;₽</td></tr>
-                  <tr><th scope="row">Бифштекс с брусничным соусом и картофельным пюре</th><td class="num">270 г</td><td class="num">495&nbsp;₽</td></tr>
-                  <tr><th scope="row">Шашлык из бедра с печёным картофелем</th><td class="num">270 г</td><td class="num">495&nbsp;₽</td></tr>
-                  <tr><th scope="row">Лапша пад тай с креветками</th><td class="num">290 г</td><td class="num">525&nbsp;₽</td></tr>
-                  <tr><th scope="row">Суп куриный</th><td class="num">270 г</td><td class="num">300&nbsp;₽</td></tr>
-                  <tr><th scope="row">Поке с лососем, эдамаме и редисом</th><td class="num">345 г</td><td class="num">525&nbsp;₽</td></tr>
-                  <tr><th scope="row">Салат «Цезарь»</th><td class="num">250 г</td><td class="num">495&nbsp;₽</td></tr>
-                  <tr><th scope="row">Бриошь «Крок-месье»</th><td class="num">240 г</td><td class="num">495&nbsp;₽</td></tr>
-                  <tr><th scope="row">Бриошь «Месье-пеперони»</th><td class="num">235 г</td><td class="num">495&nbsp;₽</td></tr>
-                  <tr><th scope="row">Гриль-чиз «Цезарь»</th><td class="num">190 г</td><td class="num">450&nbsp;₽</td></tr>
-                  <tr><th scope="row">Гриль-чиз с тунцом и луком конфи</th><td class="num">180 г</td><td class="num">450&nbsp;₽</td></tr>
-                </tbody>
-              </table>
-            </div>
-          </li>
-
-          <li class="stage stage--evening">
-            <div class="stage__split">
-              <div class="stage__intro">
-                <h3 class="stage__head">После 17:00</h3>
-                <p class="stage__line">Вечером на выпечку скидка, а витрина такая же свежая.</p>
-              </div>
-              <figure class="stage__visual stage__visual--wide">
-                <div class="photo photo--wide" data-slot="evening" data-alt="Вишнёвый пирог и чизкейк «Нью-Йорк» на витрине вечером, тёплый свет ламп, бетонная стена">
-                  <img src="images/castella-1280.webp" width="1280" height="850" alt="Кусочки бисквита и стакан чая на тёмном столе" loading="lazy" style="object-position: 50% 50%">
-                </div>
-              </figure>
-            </div>
-            <ul class="rail" tabindex="0" aria-label="Десерты и выпечка">
-              <li><h4>Вишнёвый пирог</h4><p>Песочное тесто на сметане, франжипан, цельная вишня.</p><p class="rail__price num">425&nbsp;₽ <span>165 г</span></p></li>
-              <li><h4>Торт карамельно-ореховый</h4><p>Сливочный крем, карамель, орех.</p><p class="rail__price num">425&nbsp;₽ <span>150 г</span></p></li>
-              <li><h4>Чизкейк «Нью-Йорк»</h4><p>Классический, на творожном сыре.</p><p class="rail__price num">395&nbsp;₽ <span>125 г</span></p></li>
-              <li><h4>Чизкейк «Брауни с карамелью»</h4><p>С кусочками брауни и шоколадом.</p><p class="rail__price num">395&nbsp;₽ <span>150 г</span></p></li>
-              <li><h4>Торт «Рикотта-груша»</h4><p>Мусс из рикотты и груша между бисквитами.</p><p class="rail__price num">395&nbsp;₽ <span>125 г</span></p></li>
-              <li><h4>Фермерский пирог с грушей</h4><p>Крем на творожном сыре и лепестки миндаля.</p><p class="rail__price num">395&nbsp;₽ <span>133 г</span></p></li>
-              <li><h4>Торт «Молочная девочка»</h4><p>Тонкие коржи и воздушный сливочный крем.</p><p class="rail__price num">345&nbsp;₽ <span>155 г</span></p></li>
-              <li><h4>Пудинг банановый с печеньем</h4><p>Кремовый, со сливочной текстурой.</p><p class="rail__price num">350&nbsp;₽ <span>150 г</span></p></li>
-              <li><h4>Парфе манго-маракуйя</h4><p>С хрустящими мюсли.</p><p class="rail__price num">350&nbsp;₽ <span>280 г</span></p></li>
-              <li><h4>Куб апельсиновый</h4><p>Сливочный кекс с апельсином.</p><p class="rail__price num">275&nbsp;₽ <span>80 г</span></p></li>
-              <li><h4>Печенье мисо и белый шоколад</h4><p>С арахисовой пастой.</p><p class="rail__price num">225&nbsp;₽ <span>65 г</span></p></li>
-              <li><h4>Круассан классический</h4><p>На сливочном масле.</p><p class="rail__price num">245&nbsp;₽ <span>80 г</span></p></li>
-              <li><h4>Круассаны с начинкой</h4><p>Арахис 335, миндаль 335, нутелла 355, смородина, мак или сыр 365.</p><p class="rail__price num">от 335&nbsp;₽</p></li>
-              <li><h4>Кекс банановый</h4><p>С грецким орехом.</p><p class="rail__price num">225&nbsp;₽ <span>100 г</span></p></li>
-              <li><h4>Кекс лимонный с меренгой</h4><p>Итальянская меренга сверху.</p><p class="rail__price num">225&nbsp;₽ <span>100 г</span></p></li>
-              <li><h4>Трубочка со сгущёнкой</h4><p>Хрустящая, с варёной сгущёнкой.</p><p class="rail__price num">245&nbsp;₽ <span>100 г</span></p></li>
-              <li><h4>Кейк-попс</h4><p>Бисквит в кокосовой стружке.</p><p class="rail__price num">220&nbsp;₽ <span>50 г</span></p></li>
-            </ul>
-          </li>
-        </ol>
-      </div>
-    </section>
-
-    <!-- The classic menu on a cast (light concrete) pour, by size. -->
+    <!-- The menu as the plywood bookshelf from the hall: pull a spine to open it. -->
     <section class="menu" id="menu" aria-labelledby="menu-title">
       <div class="container">
         <div class="menu__head">
-          <h2 id="menu-title">Классика в трёх объёмах</h2>
-          <fieldset class="seg" data-size hidden>
-            <legend class="visually-hidden">Объём напитка</legend>
-            <input type="radio" name="size" id="size-200" value="0"><label for="size-200">200 мл</label>
-            <input type="radio" name="size" id="size-400" value="1" checked><label for="size-400">400 мл</label>
-            <input type="radio" name="size" id="size-600" value="2"><label for="size-600">600 мл</label>
-          </fieldset>
+          <h2 id="menu-title">Меню стоит на&nbsp;полке</h2>
+          <p class="lead">Вытащите корешок, и&nbsp;книга откроется. Цены по&nbsp;меню на&nbsp;20&nbsp;сентября.</p>
         </div>
-        <div class="menu__grid">
-          <table class="sized" data-sized>
-            <caption class="visually-hidden">Кофе, чай и какао по объёму</caption>
-            <thead><tr><th scope="col">Напиток</th><th scope="col" class="num">200 мл</th><th scope="col" class="num">400 мл</th><th scope="col" class="num">600 мл</th></tr></thead>
-            <tbody>
-              <tr class="sized__group"><th scope="rowgroup" colspan="4">Кофе</th></tr>
-              <tr><th scope="row">Капучино</th><td class="num">235</td><td class="num">335</td><td class="num">445</td></tr>
-              <tr><th scope="row">Латте</th><td class="num">235</td><td class="num">335</td><td class="num">445</td></tr>
-              <tr><th scope="row">Американо</th><td class="num">235</td><td class="num">335</td><td class="num">445</td></tr>
-              <tr><th scope="row">Раф</th><td class="num">255</td><td class="num">355</td><td class="num">465</td></tr>
-              <tr><th scope="row">Флэт уайт</th><td class="num">295</td><td class="num">425</td><td class="num"></td></tr>
-              <tr><th scope="row">Фильтр, новый каждую неделю</th><td class="num">235</td><td class="num">335</td><td class="num">445</td></tr>
-              <tr class="sized__group"><th scope="rowgroup" colspan="4">Холодный кофе и матча</th></tr>
-              <tr><th scope="row">Капучино, латте или чёрный айс</th><td class="num"></td><td class="num">335</td><td class="num">445</td></tr>
-              <tr><th scope="row">Раф айс</th><td class="num"></td><td class="num">355</td><td class="num">465</td></tr>
-              <tr><th scope="row">Матча айс</th><td class="num"></td><td class="num">395</td><td class="num">495</td></tr>
-              <tr><th scope="row">Матча латте</th><td class="num"></td><td class="num">395</td><td class="num">495</td></tr>
-              <tr class="sized__group"><th scope="rowgroup" colspan="4">Чай, какао, шоколад</th></tr>
-              <tr><th scope="row">Ассам, Эрл Грей, Сенча Ганпаудер, жасминовые спирали, каркаде, гречишный</th><td class="num">215</td><td class="num">295</td><td class="num">395</td></tr>
-              <tr><th scope="row">Какао</th><td class="num">235</td><td class="num">335</td><td class="num">445</td></tr>
-              <tr><th scope="row">Горячий шоколад или кайенский</th><td class="num">345</td><td class="num">495</td><td class="num">625</td></tr>
-              <tr><th scope="row">Свежевыжатый сок: апельсин, грейпфрут или микс</th><td class="num">295</td><td class="num">515</td><td class="num">655</td></tr>
-              <tr><th scope="row">Альтернативное молоко, к любому напитку</th><td class="num">+65</td><td class="num">+95</td><td class="num">+130</td></tr>
-            </tbody>
-          </table>
 
-          <div class="fixed">
-            <h3 class="fixed__title">Один размер</h3>
-            <ul class="rows rows--cast">
+        <div class="shelf" role="tablist" aria-label="Разделы меню" data-shelf>
+          <button type="button" class="spine spine--curtain" role="tab" id="t-signature" aria-controls="signature" aria-selected="true" style="--h:100%; --w:4.2rem">Авторский кофе</button>
+          <button type="button" class="spine spine--canvas" role="tab" id="t-classic" aria-controls="classic" aria-selected="false" tabindex="-1" style="--h:92%; --w:4.6rem">Классика</button>
+          <button type="button" class="spine spine--pouf" role="tab" id="t-cold" aria-controls="cold" aria-selected="false" tabindex="-1" style="--h:84%; --w:3.8rem">Холодное</button>
+          <button type="button" class="spine spine--pink" role="tab" id="t-tea" aria-controls="tea" aria-selected="false" tabindex="-1" style="--h:96%; --w:3.6rem">Авторский чай</button>
+          <button type="button" class="spine spine--ply" role="tab" id="t-breakfast" aria-controls="breakfast" aria-selected="false" tabindex="-1" style="--h:88%; --w:4.4rem">Завтраки</button>
+          <button type="button" class="spine spine--graphite" role="tab" id="t-lunch" aria-controls="lunch" aria-selected="false" tabindex="-1" style="--h:100%; --w:4rem">Обед</button>
+          <button type="button" class="spine spine--zebra" role="tab" id="t-bakery" aria-controls="bakery" aria-selected="false" tabindex="-1" style="--h:80%; --w:4.2rem">Выпечка</button>
+          <button type="button" class="spine spine--curtain-dark" role="tab" id="t-dessert" aria-controls="dessert" aria-selected="false" tabindex="-1" style="--h:94%; --w:3.8rem">Десерты</button>
+          <button type="button" class="spine spine--ply-light" role="tab" id="t-shelf" aria-controls="shelf" aria-selected="false" tabindex="-1" style="--h:86%; --w:4.8rem">Зерно и дрипы</button>
+        </div>
+        <div class="plank" aria-hidden="true"></div>
+
+        <div class="book" data-book>
+          <section class="page" role="tabpanel" id="signature" aria-labelledby="t-signature" tabindex="0">
+            <div class="page__side">
+              <h3 class="page__title">Авторский кофе</h3>
+              <p>Карта меняется с сезоном, а к премьерам фильмов и сериалов бариста придумывают отдельное меню. Все напитки 400 мл.</p>
+            </div>
+            <ul class="dishes">
+              <li><h4>Раф «Мисо-медовик»</h4><p>Гречишный мёд, карамель и солоноватая нота мисо.</p><span class="price num">490&nbsp;₽</span></li>
+              <li><h4>Капучино «Лимонный тарт»</h4><p>Лимонная кислинка, апельсин и нежная сырная пенка.</p><span class="price num">490&nbsp;₽</span></li>
+              <li><h4>Раф «Тыквенный пай с барбарисом»</h4><p>Пряная тыква, корица, сливочная пенка и барбарис.</p><span class="price num">445&nbsp;₽</span></li>
+              <li><h4>Латте «Мисо-арахис»</h4><p>Насыщенный арахис, мисо и медовая сладость.</p><span class="price num">445&nbsp;₽</span></li>
+              <li><h4>Латте «Кантри», с протеином</h4><p>Вкус сгущёнки, сырная пенка и хрустящие рисовые шарики.</p><span class="price num">490&nbsp;₽</span></li>
+              <li><h4>Горячий Бамбл-би, апельсин</h4><p>Кофе на апельсиновом соке с карамельной ноткой.</p><span class="price num">475&nbsp;₽</span></li>
+              <li><h4>Горячий Бамбл-би, вишня</h4><p>Кофе на вишнёвом соке с натуральным пюре вишни.</p><span class="price num">415&nbsp;₽</span></li>
+            </ul>
+          </section>
+
+          <section class="page" role="tabpanel" id="classic" aria-labelledby="t-classic" tabindex="0">
+            <div class="page__side">
+              <h3 class="page__title">Классика в&nbsp;трёх объёмах</h3>
+              <p>Фильтр меняется каждую неделю. Альтернативное молоко ALPRO: кокосовое, банановое, миндальное или безлактозное.</p>
+              <fieldset class="seg" data-size hidden>
+                <legend class="visually-hidden">Объём напитка</legend>
+                <input type="radio" name="size" id="size-200" value="0"><label for="size-200">200 мл</label>
+                <input type="radio" name="size" id="size-400" value="1" checked><label for="size-400">400 мл</label>
+                <input type="radio" name="size" id="size-600" value="2"><label for="size-600">600 мл</label>
+              </fieldset>
+            </div>
+            <table class="sized" data-sized>
+              <caption class="visually-hidden">Кофе, чай и какао по объёму</caption>
+              <thead><tr><th scope="col">Напиток</th><th scope="col" class="num">200 мл</th><th scope="col" class="num">400 мл</th><th scope="col" class="num">600 мл</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">Капучино</th><td class="num">235</td><td class="num">335</td><td class="num">445</td></tr>
+                <tr><th scope="row">Латте</th><td class="num">235</td><td class="num">335</td><td class="num">445</td></tr>
+                <tr><th scope="row">Американо</th><td class="num">235</td><td class="num">335</td><td class="num">445</td></tr>
+                <tr><th scope="row">Раф</th><td class="num">255</td><td class="num">355</td><td class="num">465</td></tr>
+                <tr><th scope="row">Флэт уайт</th><td class="num">295</td><td class="num">425</td><td class="num"></td></tr>
+                <tr><th scope="row">Фильтр</th><td class="num">235</td><td class="num">335</td><td class="num">445</td></tr>
+                <tr><th scope="row">Капучино, латте или чёрный айс</th><td class="num"></td><td class="num">335</td><td class="num">445</td></tr>
+                <tr><th scope="row">Раф айс</th><td class="num"></td><td class="num">355</td><td class="num">465</td></tr>
+                <tr><th scope="row">Матча латте или матча айс</th><td class="num"></td><td class="num">395</td><td class="num">495</td></tr>
+                <tr><th scope="row">Ассам, Эрл Грей, Сенча Ганпаудер, жасминовые спирали, каркаде, гречишный</th><td class="num">215</td><td class="num">295</td><td class="num">395</td></tr>
+                <tr><th scope="row">Какао</th><td class="num">235</td><td class="num">335</td><td class="num">445</td></tr>
+                <tr><th scope="row">Горячий шоколад или кайенский</th><td class="num">345</td><td class="num">495</td><td class="num">625</td></tr>
+                <tr><th scope="row">Свежевыжатый сок: апельсин, грейпфрут или микс</th><td class="num">295</td><td class="num">515</td><td class="num">655</td></tr>
+                <tr><th scope="row">Альтернативное молоко</th><td class="num">+65</td><td class="num">+95</td><td class="num">+130</td></tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section class="page" role="tabpanel" id="cold" aria-labelledby="t-cold" tabindex="0">
+            <div class="page__side">
+              <h3 class="page__title">Холодное и&nbsp;особое</h3>
+              <p>Один объём. Бамбл-би варят на соке, а воронку на вишнёвом соке.</p>
+            </div>
+            <ul class="rows">
               <li><span>Эспрессо</span><span class="rows__meta num">36 г</span><span class="num">215&nbsp;₽</span></li>
               <li><span>Вишнёвая воронка, кофе на вишнёвом соке</span><span class="rows__meta num">200 мл</span><span class="num">305&nbsp;₽</span></li>
               <li><span>Мокко</span><span class="rows__meta num">400 мл</span><span class="num">455&nbsp;₽</span></li>
@@ -274,22 +181,167 @@
               <li><span>Смузи манго-маракуйя</span><span class="rows__meta num">400 мл</span><span class="num">445&nbsp;₽</span></li>
               <li><span>Лимонад цитрусовый</span><span class="rows__meta num">400 мл</span><span class="num">395&nbsp;₽</span></li>
             </ul>
-          </div>
+          </section>
+
+          <section class="page" role="tabpanel" id="tea" aria-labelledby="t-tea" tabindex="0">
+            <div class="page__side">
+              <h3 class="page__title">Авторский чай</h3>
+              <p>400 мл, под фруктовыми и сырными пенками.</p>
+              <figure class="page__photo" data-slot="tea" data-alt="Матча латте или чай «Осенний лес» в стакане Бейджанса на бетонной стойке">
+                <img src="images/matcha-1280.webp" width="1280" height="720" alt="Матча латте с латте-артом в чёрной чашке" loading="lazy">
+              </figure>
+            </div>
+            <ul class="dishes">
+              <li><h4>Ходзича латте «Медово-ореховый тарт»</h4><p>Ореховые ноты, мёд, карамель и сырная пенка.</p><span class="price num">490&nbsp;₽</span></li>
+              <li><h4>«Осенний лес»</h4><p>Брусника, яблоко и мёд под яблочной пенкой.</p><span class="price num">395&nbsp;₽</span></li>
+              <li><h4>«Яблочная шарлотка»</h4><p>Чёрный чай со вкусом печёного яблока и карамели.</p><span class="price num">395&nbsp;₽</span></li>
+              <li><h4>«Пряный грейпфрут»</h4><p>Грейпфрут, мёд и имбирь.</p><span class="price num">395&nbsp;₽</span></li>
+              <li><h4>«Малина-тайга»</h4><p>Ягодный чай с оттенком таёжных трав.</p><span class="price num">395&nbsp;₽</span></li>
+              <li><h4>Облепиховый</h4><p>На облепиховом пюре.</p><span class="price num">395&nbsp;₽</span></li>
+            </ul>
+          </section>
+
+          <section class="page" role="tabpanel" id="breakfast" aria-labelledby="t-breakfast" tabindex="0">
+            <div class="page__side">
+              <h3 class="page__title">Завтраки с&nbsp;7:30</h3>
+              <p>По выходным открываемся в 8:00.</p>
+            </div>
+            <ul class="rows">
+              <li><span>Ванильные сырники, сметана и малина</span><span class="rows__meta num">175 г</span><span class="num">325&nbsp;₽</span></li>
+              <li><span>Творожная запеканка со сметаной и малиной</span><span class="rows__meta num">230 г</span><span class="num">325&nbsp;₽</span></li>
+              <li><span>Омлет с ветчиной и сыром</span><span class="rows__meta num">200 г</span><span class="num">350&nbsp;₽</span></li>
+              <li><span>Рисовая каша на кокосовом молоке</span><span class="rows__meta num">285 г</span><span class="num">289&nbsp;₽</span></li>
+              <li><span>Овсяная каша на молоке</span><span class="rows__meta num">285 г</span><span class="num">240&nbsp;₽</span></li>
+              <li><span>Блины с творогом и бананом</span><span class="rows__meta num">215 г</span><span class="num">415&nbsp;₽</span></li>
+              <li><span>Блины с мясом</span><span class="rows__meta num">210 г</span><span class="num">460&nbsp;₽</span></li>
+              <li><span>Брекфаст ролл с омлетом, ветчиной и двумя сырами</span><span class="rows__meta num">185 г</span><span class="num">385&nbsp;₽</span></li>
+            </ul>
+          </section>
+
+          <section class="page" role="tabpanel" id="lunch" aria-labelledby="t-lunch" tabindex="0">
+            <div class="page__side">
+              <h3 class="page__title">Обед</h3>
+              <p>Горячее, сэндвичи на бриоши и салаты. Всё можно забрать с собой.</p>
+            </div>
+            <ul class="rows">
+              <li><span>Шницель с пюре из батата</span><span class="rows__meta num">260 г</span><span class="num">495&nbsp;₽</span></li>
+              <li><span>Бифштекс с брусничным соусом и картофельным пюре</span><span class="rows__meta num">270 г</span><span class="num">495&nbsp;₽</span></li>
+              <li><span>Шашлык из бедра с печёным картофелем</span><span class="rows__meta num">270 г</span><span class="num">495&nbsp;₽</span></li>
+              <li><span>Лапша пад тай с креветками</span><span class="rows__meta num">290 г</span><span class="num">525&nbsp;₽</span></li>
+              <li><span>Суп куриный</span><span class="rows__meta num">270 г</span><span class="num">300&nbsp;₽</span></li>
+              <li><span>Поке с лососем, эдамаме и редисом</span><span class="rows__meta num">345 г</span><span class="num">525&nbsp;₽</span></li>
+              <li><span>Салат «Цезарь»</span><span class="rows__meta num">250 г</span><span class="num">495&nbsp;₽</span></li>
+              <li><span>Бриошь «Крок-месье»</span><span class="rows__meta num">240 г</span><span class="num">495&nbsp;₽</span></li>
+              <li><span>Бриошь «Месье-пеперони»</span><span class="rows__meta num">235 г</span><span class="num">495&nbsp;₽</span></li>
+              <li><span>Гриль-чиз «Цезарь»</span><span class="rows__meta num">190 г</span><span class="num">450&nbsp;₽</span></li>
+              <li><span>Гриль-чиз с тунцом и луком конфи</span><span class="rows__meta num">180 г</span><span class="num">450&nbsp;₽</span></li>
+            </ul>
+          </section>
+
+          <section class="page" role="tabpanel" id="bakery" aria-labelledby="t-bakery" tabindex="0">
+            <div class="page__side">
+              <h3 class="page__title">Выпечка</h3>
+              <p>После 17:00 на выпечку скидка, а витрина такая же свежая.</p>
+              <figure class="page__photo" data-slot="bakery" data-alt="Круассаны и банановый кекс на витрине Бейджанса">
+                <img src="images/croissant-1280.webp" width="1280" height="964" alt="Миндальный круассан в сахарной пудре" loading="lazy">
+              </figure>
+            </div>
+            <ul class="rows">
+              <li><span>Круассан классический</span><span class="rows__meta num">80 г</span><span class="num">245&nbsp;₽</span></li>
+              <li><span>Круассан с арахисом</span><span class="rows__meta num">115 г</span><span class="num">335&nbsp;₽</span></li>
+              <li><span>Круассан миндальный</span><span class="rows__meta num">150 г</span><span class="num">335&nbsp;₽</span></li>
+              <li><span>Круассан с нутеллой</span><span class="rows__meta num">100 г</span><span class="num">355&nbsp;₽</span></li>
+              <li><span>Круассан с чёрной смородиной</span><span class="rows__meta num">100 г</span><span class="num">365&nbsp;₽</span></li>
+              <li><span>Круассан с маком</span><span class="rows__meta num">120 г</span><span class="num">365&nbsp;₽</span></li>
+              <li><span>Круассан с сыром</span><span class="rows__meta num">90 г</span><span class="num">365&nbsp;₽</span></li>
+              <li><span>Кекс банановый с грецким орехом</span><span class="rows__meta num">100 г</span><span class="num">225&nbsp;₽</span></li>
+              <li><span>Кекс лимонный с меренгой</span><span class="rows__meta num">100 г</span><span class="num">225&nbsp;₽</span></li>
+              <li><span>Трубочка со сгущёнкой</span><span class="rows__meta num">100 г</span><span class="num">245&nbsp;₽</span></li>
+              <li><span>Кейк-попс в кокосовой стружке</span><span class="rows__meta num">50 г</span><span class="num">220&nbsp;₽</span></li>
+            </ul>
+          </section>
+
+          <section class="page" role="tabpanel" id="dessert" aria-labelledby="t-dessert" tabindex="0">
+            <div class="page__side">
+              <h3 class="page__title">Десерты</h3>
+              <p>Гости в отзывах отдельно хвалят карамельно-яблочный пирог и банановый тортик.</p>
+              <figure class="page__photo" data-slot="dessert" data-alt="Вишнёвый пирог и чизкейк «Нью-Йорк» на тарелке, вечерний свет, бетонная стена">
+                <img src="images/castella-1280.webp" width="1280" height="850" alt="Кусочки бисквита и стакан чая на тёмном столе" loading="lazy">
+              </figure>
+            </div>
+            <ul class="rows">
+              <li><span>Вишнёвый пирог с франжипаном</span><span class="rows__meta num">165 г</span><span class="num">425&nbsp;₽</span></li>
+              <li><span>Торт карамельно-ореховый</span><span class="rows__meta num">150 г</span><span class="num">425&nbsp;₽</span></li>
+              <li><span>Чизкейк «Нью-Йорк»</span><span class="rows__meta num">125 г</span><span class="num">395&nbsp;₽</span></li>
+              <li><span>Чизкейк «Брауни с карамелью»</span><span class="rows__meta num">150 г</span><span class="num">395&nbsp;₽</span></li>
+              <li><span>Торт «Рикотта-груша»</span><span class="rows__meta num">125 г</span><span class="num">395&nbsp;₽</span></li>
+              <li><span>Фермерский пирог с грушей</span><span class="rows__meta num">133 г</span><span class="num">395&nbsp;₽</span></li>
+              <li><span>Торт «Молочная девочка»</span><span class="rows__meta num">155 г</span><span class="num">345&nbsp;₽</span></li>
+              <li><span>Пудинг банановый с печеньем</span><span class="rows__meta num">150 г</span><span class="num">350&nbsp;₽</span></li>
+              <li><span>Парфе манго-маракуйя с мюсли</span><span class="rows__meta num">280 г</span><span class="num">350&nbsp;₽</span></li>
+              <li><span>Куб апельсиновый</span><span class="rows__meta num">80 г</span><span class="num">275&nbsp;₽</span></li>
+              <li><span>Печенье мисо и белый шоколад</span><span class="rows__meta num">65 г</span><span class="num">225&nbsp;₽</span></li>
+            </ul>
+          </section>
+
+          <section class="page page--offer" role="tabpanel" id="shelf" aria-labelledby="t-shelf" tabindex="0">
+            <figure class="page__photo page__photo--tall">
+              <img src="images/place/coffee-shelf.webp" width="853" height="1280" alt="Пачки кофе и дрипов на полках из фанеры в зале" loading="lazy">
+            </figure>
+            <div class="offer">
+              <h3 class="page__title">Вкус Бейджанса домой</h3>
+              <p class="offer__price num">550&nbsp;₽</p>
+              <p class="offer__what">Дрипы «Бейджанс», 6&nbsp;штук. Открыть, пролить горячей водой, готово.</p>
+              <ul class="rows">
+                <li><span>Дрип «Бейджанс», 1 штука</span><span class="rows__meta"></span><span class="num">99&nbsp;₽</span></li>
+                <li><span>Зерно «Ром», выдержано в бочках из-под рома. Колумбия Кастильо, арабика, средняя обжарка</span><span class="rows__meta num">100 г</span><span class="num">799&nbsp;₽</span></li>
+              </ul>
+              <p class="note">На полке ещё мерч и подарочные сертификаты. Всё продаётся на кассе.</p>
+            </div>
+          </section>
         </div>
-        <p class="menu__foot">Цены в рублях. Меню обновлено 20 сентября по данным кофейни на Яндекс Картах.</p>
       </div>
     </section>
 
-    <!-- The room: their own neon sign, set as type. -->
-    <section class="room" id="room" aria-labelledby="room-title">
+    <!-- The curtain parts as you scroll and the neon comes on. -->
+    <section class="stage" id="room" aria-labelledby="room-title" data-stage>
+      <div class="stage__pin">
+        <div class="container stage__grid">
+          <div class="stage__text">
+            <h2 id="room-title" class="visually-hidden">Неон в зале</h2>
+            <p class="neon" data-neon>Не&nbsp;экономьте на&nbsp;женщинах и&nbsp;кофе.</p>
+            <p class="stage__line">Так написано неоном на нашей стене. Мы согласны с каждым словом.</p>
+          </div>
+          <figure class="frame frame--night stage__photo">
+            <img src="images/place/neon-sign.webp" width="853" height="1280" alt="Розовая неоновая надпись «Не экономьте на женщинах и кофе» на тёмной стене" loading="lazy">
+          </figure>
+        </div>
+        <div class="curtain curtain--l" aria-hidden="true" data-curtain="l"></div>
+        <div class="curtain curtain--r" aria-hidden="true" data-curtain="r"></div>
+      </div>
+    </section>
+
+    <!-- The hall: the room's own photographs and what it offers. -->
+    <section class="hall" id="hall" aria-labelledby="hall-title">
       <div class="container">
-        <h2 id="room-title" class="visually-hidden">Зал</h2>
-        <p class="neon" data-neon>Не&nbsp;экономьте на&nbsp;женщинах и&nbsp;кофе.</p>
-        <p class="room__line">Так написано неоном у нас на стене. Бетон, кресла-зебры, бордовые шторы и много места внутри.</p>
+        <div class="hall__head">
+          <h2 id="hall-title">Бетон, бархат и&nbsp;кресла-зебры</h2>
+          <p class="lead">Мест внутри много, летом открыта веранда.</p>
+        </div>
+        <div class="bento" data-reveal>
+          <figure class="tile tile--photo tile--zebra">
+            <img src="images/place/zebra.webp" width="853" height="1280" alt="Угол с креслом и пуфами в зебровом принте, фанерная стена и лампа" loading="lazy">
+            <figcaption>Угол с зебрами и&nbsp;лампой</figcaption>
+          </figure>
+          <figure class="tile tile--photo tile--poster">
+            <img src="images/place/faces-poster.webp" width="853" height="1280" alt="Графичный постер со множеством лиц на бетонной стене" loading="lazy">
+            <figcaption>Постер на бетоне</figcaption>
+          </figure>
+          <div class="tile tile--pouf"><p class="tile__big">Веранда</p><p>Летом можно сидеть на улице.</p></div>
+          <div class="tile tile--ply"><p class="tile__big">С&nbsp;собакой</p><p>Пускаем со всеми животными.</p></div>
+          <div class="tile tile--paper"><p class="tile__big">Wi&#8209;Fi</p><p>Для учёбы и работы, университет рядом.</p></div>
+        </div>
         <dl class="facts" data-reveal>
-          <div><dt>Веранда</dt><dd>Летом можно сидеть на улице</dd></div>
-          <div><dt>С собакой</dt><dd>Пускаем со всеми животными</dd></div>
-          <div><dt>Wi&#8209;Fi</dt><dd>Для учёбы и работы, университет рядом</dd></div>
           <div><dt>Оплата картой</dt><dd>И подарочные сертификаты</dd></div>
           <div><dt>С собой</dt><dd>Любой напиток и еда навынос</dd></div>
           <div><dt>Коляска</dt><dd>Вход доступен, сам зал пока нет</dd></div>
@@ -297,28 +349,7 @@
       </div>
     </section>
 
-    <!-- The shelf: drip bags and beans as an offer. -->
-    <section class="shelf" id="shelf" aria-labelledby="shelf-title">
-      <div class="container shelf__grid">
-        <figure class="shelf__visual">
-          <div class="photo photo--shelf" data-slot="shelf" data-alt="Коробка дрип-пакетов «Бейджанс» и пачка зерна «Ром» на полке из фанеры, бетонная стена, жёсткий свет">
-            <img src="images/beans-1280.webp" width="1280" height="853" alt="Обжаренные кофейные зёрна на тёмной поверхности" loading="lazy" style="object-position: 50% 50%">
-          </div>
-        </figure>
-        <div class="shelf__offer">
-          <h2 id="shelf-title">Вкус Бейджанса домой</h2>
-          <p class="shelf__price num">550&nbsp;₽</p>
-          <p class="shelf__what">Дрипы «Бейджанс», 6&nbsp;штук. Открыть, пролить горячей водой, готово.</p>
-          <ul class="rows">
-            <li><span>Дрип «Бейджанс», 1 штука</span><span class="rows__meta"></span><span class="num">99&nbsp;₽</span></li>
-            <li><span>Зерно «Ром», выдержано в бочках из-под рома. Колумбия Кастильо, арабика, средняя обжарка</span><span class="rows__meta num">100 г</span><span class="num">799&nbsp;₽</span></li>
-          </ul>
-          <p class="note">На полке ещё мерч и подарочные сертификаты. Всё продаётся на кассе.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Proof on the curtain band: the rating, in the guests' own words. -->
+    <!-- Proof on the pouf-blue band: the rating, and three notes pinned to the wall. -->
     <section class="reviews" id="reviews" aria-labelledby="reviews-title">
       <div class="container reviews__grid">
         <div class="reviews__head">
@@ -327,29 +358,29 @@
           <table class="scores">
             <caption class="visually-hidden">Доля положительных отзывов по темам</caption>
             <tbody>
-              <tr><th scope="row">Интерьер</th><td class="num">100%</td></tr>
-              <tr><th scope="row">Атмосфера</th><td class="num">99%</td></tr>
-              <tr><th scope="row">Персонал</th><td class="num">92%</td></tr>
-              <tr><th scope="row">Время ожидания</th><td class="num">87%</td></tr>
-              <tr><th scope="row">Кофе</th><td class="num">82%</td></tr>
+              <tr style="--v:100"><th scope="row">Интерьер</th><td class="num">100%</td></tr>
+              <tr style="--v:99"><th scope="row">Атмосфера</th><td class="num">99%</td></tr>
+              <tr style="--v:92"><th scope="row">Персонал</th><td class="num">92%</td></tr>
+              <tr style="--v:87"><th scope="row">Время ожидания</th><td class="num">87%</td></tr>
+              <tr style="--v:82"><th scope="row">Кофе</th><td class="num">82%</td></tr>
             </tbody>
           </table>
         </div>
-        <ul class="quotes">
-          <li>
+        <ul class="notes" data-reveal>
+          <li style="--rest:-1.5deg">
             <blockquote><p>Здесь постоянно придумывают что-то новое и делают авторские напитки под премьеры фильмов и сериалов.</p></blockquote>
-            <p class="quotes__by">Элен, 17 августа</p>
+            <p class="notes__by">Элен, 17 августа</p>
           </li>
-          <li>
+          <li style="--rest:1.2deg">
             <blockquote><p>Капучино сбалансированный. Рекомендую банановый кекс. Кофе сделали за пару минут.</p></blockquote>
-            <p class="quotes__by">Екатерина Клейнер, 12 августа</p>
+            <p class="notes__by">Екатерина Клейнер, 12 августа</p>
           </li>
-          <li>
+          <li style="--rest:-0.8deg">
             <blockquote><p>Матча кокос-лаванда: вкус раскрывается особенно приятно, без специфического привкуса.</p></blockquote>
-            <p class="quotes__by">Анастасия Шевель, 16 марта</p>
+            <p class="notes__by">Анастасия Шевель, 16 марта</p>
           </li>
         </ul>
-        <a class="link reviews__more" href="https://yandex.ru/maps/org/beydzhans/5156085389/reviews/" target="_blank" rel="noopener">Все 275 отзывов на Яндекс Картах</a>
+        <a class="ulink reviews__more" href="https://yandex.ru/maps/org/beydzhans/5156085389/reviews/" target="_blank" rel="noopener">Все 275 отзывов на Яндекс Картах</a>
       </div>
     </section>
 
@@ -364,11 +395,11 @@
               <div><dt>Метро «Белорусская»</dt><dd class="num">740 м</dd></div>
               <div><dt>Остановка «Улица Правды»</dt><dd class="num">45 м</dd></div>
             </dl>
-            <p>Рядом с университетом. Парковки видно на <a class="link" href="https://yandex.ru/maps/org/beydzhans/5156085389/" target="_blank" rel="noopener">карте</a>.</p>
-            <a class="btn btn--primary" href="https://yandex.ru/maps/?rtext=~55.781039%2C37.573600&amp;rtt=pd" target="_blank" rel="noopener">Построить маршрут</a>
+            <p>Рядом с университетом. Парковки видно на <a class="ulink" href="https://yandex.ru/maps/org/beydzhans/5156085389/" target="_blank" rel="noopener">карте</a>.</p>
+            <a class="btn btn--primary" href="https://yandex.ru/maps/?rtext=~55.781039%2C37.573600&amp;rtt=pd" target="_blank" rel="noopener"><span>Построить маршрут</span></a>
           </div>
           <div class="panel panel--map">
-            <iframe title="Бейджанс на Яндекс Картах" src="https://yandex.ru/map-widget/v1/?ll=37.573600%2C55.781039&amp;mode=search&amp;oid=5156085389&amp;ol=biz&amp;z=16&amp;theme=dark" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe title="Бейджанс на Яндекс Картах" tabindex="-1" src="https://yandex.ru/map-widget/v1/?ll=37.573600%2C55.781039&amp;mode=search&amp;oid=5156085389&amp;ol=biz&amp;z=16" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
           <div class="panel">
             <h3>Часы</h3>
@@ -395,12 +426,18 @@
   <footer class="footer">
     <div class="container footer__grid">
       <p class="footer__col">Ленинградский проспект, 13, стр. 1<br>Москва, метро «Белорусская»</p>
-      <p class="footer__mark" aria-hidden="true">Бейджанс</p>
+      <p class="wordmark footer__mark" aria-hidden="true">Бейджанс</p>
       <p class="footer__col footer__col--end"><a href="tel:+79162193360" class="num">+7 916 219-33-60</a><br>Будни с 7:30 до 22:00<br>Выходные с 8:00 до 22:00</p>
     </div>
+    <nav class="container footer__nav" aria-label="Быстрые ссылки">
+      <a class="ulink" href="#signature">Авторский кофе</a>
+      <a class="ulink" href="#classic">Классика по объёмам</a>
+      <a class="ulink" href="#shelf">Зерно и дрипы домой</a>
+      <a class="ulink" href="#visit">Часы и адрес</a>
+    </nav>
     <div class="container footer__legal">
-      <p>Данные о меню, часах и отзывах взяты с <a href="https://yandex.ru/maps/org/beydzhans/5156085389/" target="_blank" rel="noopener">Яндекс Карт</a>.</p>
-      <p data-credits>Фотографии: <a href="https://commons.wikimedia.org/wiki/File:Matcha_tea_latte_with_rosetta_latte_art.jpg">Irvan Ary Maulana</a> (CC BY-SA 4.0), <a href="https://commons.wikimedia.org/wiki/File:C%C3%B3ctel_de_caf%C3%A9_en_copa_martini_2.jpg">Rjcastillo</a> (CC BY-SA 4.0), <a href="https://commons.wikimedia.org/wiki/File:Almond_croissant_-_Workshop_Coffee_Lab_2025-06-27.jpg">Andy Li</a> (CC0), <a href="https://commons.wikimedia.org/wiki/File:Castella_002.jpg">Ocdp</a> (CC0), <a href="https://commons.wikimedia.org/wiki/File:Roasted_coffee_beans_on_the_surface._01.jpg">A S M Jobaer</a> (CC BY-SA 4.0).</p>
+      <p>Меню, часы, отзывы и фотографии зала взяты с <a href="https://yandex.ru/maps/org/beydzhans/5156085389/" target="_blank" rel="noopener">Яндекс Карт</a>.</p>
+      <p data-credits>Фото блюд, временно: <a href="https://commons.wikimedia.org/wiki/File:Matcha_tea_latte_with_rosetta_latte_art.jpg">Irvan Ary Maulana</a> (CC BY-SA 4.0), <a href="https://commons.wikimedia.org/wiki/File:Almond_croissant_-_Workshop_Coffee_Lab_2025-06-27.jpg">Andy Li</a> (CC0), <a href="https://commons.wikimedia.org/wiki/File:Castella_002.jpg">Ocdp</a> (CC0).</p>
     </div>
   </footer>
 

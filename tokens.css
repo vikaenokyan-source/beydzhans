@@ -1,60 +1,74 @@
-/* Formwork, night pour, re-mixed from the Бейджанс room:
- * primitives come from the interior photographs (graphite concrete walls,
- * zebra off-white, the pink neon sign, the oxblood curtain); semantic tokens
- * alias them; components read only the semantic layer. */
+/* Бейджанс: every primitive is taken from the room's photographs
+ * (trowelled concrete, the terracotta velvet curtain, the dusty blue poufs,
+ * plywood boxes, the warm white neon, the pink neon sign, zebra black and white).
+ * Semantic tokens alias them; components read only the semantic layer. */
 :root {
-  color-scheme: dark;
+  color-scheme: light;
   --space-3xs: 2px; --space-2xs: 4px; --space-xs: 8px; --space-sm: 12px; --space-md: 16px; --space-lg: 24px; --space-xl: 40px; --space-2xl: 64px; --space-3xl: 96px; --space-4xl: 144px;
-  --text-xs: 0.8125rem; --text-sm: 0.875rem; --text-md: 1rem; --text-lg: 1.25rem; --text-xl: 1.5625rem; --text-2xl: 1.953rem; --text-3xl: 2.441rem;
-  --text-display-s: clamp(2.25rem, 4vw + 0.5rem, 3.75rem); --text-display: clamp(3rem, 6vw + 0.75rem, 6.5rem);
-  --text-section: clamp(2.25rem, 3vw + 1rem, 4rem); --text-title: clamp(1.25rem, 0.75vw + 0.875rem, 1.625rem); --text-lead: clamp(1.125rem, 0.35vw + 1rem, 1.375rem);
-  --text-wordmark: clamp(4rem, 16vw, 15rem);
-  --ease-out: cubic-bezier(0.16, 1, 0.3, 1); --ease-in: cubic-bezier(0.7, 0, 0.84, 0); --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
-  --dur-micro: 120ms; --dur-short: 220ms; --dur-long: 420ms;
-  --container: 1440px; --gutter: 64px; --gap-columns: 32px; --section-gap-s: 120px; --section-gap: 144px; --section-gap-l: 176px;
+  --text-xs: 0.8125rem; --text-sm: 0.875rem; --text-md: 1rem; --text-lg: 1.25rem; --text-xl: 1.5rem; --text-2xl: 2rem; --text-3xl: 2.75rem;
+  --text-section: clamp(2.25rem, 2.6vw + 1.2rem, 4rem); --text-title: clamp(1.25rem, 0.6vw + 1rem, 1.625rem); --text-lead: clamp(1.125rem, 0.35vw + 1rem, 1.375rem);
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1); --ease-in: cubic-bezier(0.7, 0, 0.84, 0); --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+  --dur-micro: 140ms; --dur-short: 220ms; --dur-long: 480ms;
+  --container: 1440px; --gutter: 64px; --gap-columns: 24px; --section-gap-s: 120px; --section-gap: 152px; --section-gap-l: 184px;
   --z-base: 1; --z-raised: 10; --z-dropdown: 100; --z-sticky: 200; --z-sticky-nav: 300; --z-modal: 400; --z-toast: 500; --z-tooltip: 600;
 
   /* primitives */
-  --graphite-900: oklch(19% 0.007 60);
-  --graphite-800: oklch(23% 0.008 60);
-  --graphite-700: oklch(27% 0.009 60);
-  --graphite-600: oklch(31% 0.01 60);
-  --graphite-500: oklch(39% 0.011 60);
-  --concrete-300: oklch(79% 0.008 70);
-  --concrete-400: oklch(73% 0.009 70);
-  --concrete-500: oklch(66% 0.01 70);
-  --zebra-50: oklch(95% 0.008 80);
-  --zebra-200: oklch(85% 0.01 75);
-  --zebra-400: oklch(74% 0.012 70);
-  --neon-500: oklch(73% 0.19 352);
-  --neon-400: oklch(79% 0.15 352);
-  --neon-700: oklch(52% 0.18 352);
-  --neon-950: oklch(21% 0.03 352);
-  --curtain-700: oklch(34% 0.11 22);
-  --curtain-800: oklch(29% 0.095 22);
+  --concrete-50: oklch(93% 0.004 240);
+  --concrete-100: oklch(89% 0.005 240);
+  --concrete-200: oklch(84% 0.006 240);
+  --concrete-300: oklch(77% 0.007 240);
+  --concrete-500: oklch(62% 0.008 240);
+  --graphite-950: oklch(17% 0.01 250);
+  --graphite-900: oklch(21% 0.011 250);
+  --graphite-700: oklch(33% 0.012 250);
+  --graphite-600: oklch(41% 0.012 250);
+  --curtain-500: oklch(53% 0.15 33);
+  --curtain-600: oklch(46% 0.14 31);
+  --curtain-700: oklch(39% 0.12 29);
+  --curtain-200: oklch(86% 0.05 40);
+  --pouf-500: oklch(45% 0.07 235);
+  --pouf-600: oklch(39% 0.065 235);
+  --pouf-200: oklch(84% 0.03 235);
+  --ply-300: oklch(74% 0.09 65);
+  --ply-500: oklch(55% 0.11 50);
+  --ply-700: oklch(40% 0.09 45);
+  --canvas: oklch(97% 0.004 90);
+  --neon-warm: oklch(96% 0.03 85);
+  --neon-halo: oklch(82% 0.11 75);
+  --neon-pink: oklch(76% 0.15 350);
 
-  /* semantic: night pour (the page) */
-  --color-paper: var(--graphite-800); --color-paper-2: var(--graphite-700); --color-paper-3: var(--graphite-600);
-  --color-plate: var(--graphite-700); --color-plate-ink: var(--zebra-50);
-  --color-ink: var(--zebra-50); --color-ink-2: var(--zebra-200); --color-muted: var(--zebra-400);
-  --color-rule: var(--graphite-500);
-  --color-shadow: var(--graphite-900);
-  --color-accent: var(--neon-500); --color-accent-ink: var(--neon-950); --color-focus: var(--neon-400);
-  --color-accent-deep: var(--neon-700); --color-accent-hover: var(--neon-400);
-  /* semantic: cast pour (the menu, light concrete) */
-  --color-cast: var(--concrete-300); --color-cast-2: var(--concrete-400); --color-cast-rule: var(--concrete-500);
-  --color-cast-ink: var(--graphite-800); --color-cast-ink-2: var(--graphite-600); --color-cast-focus: var(--neon-700);
-  /* semantic: the curtain (one band) */
-  --color-curtain: var(--curtain-700); --color-curtain-2: var(--curtain-800); --color-curtain-ink: var(--zebra-50);
-  --color-error: oklch(70% 0.17 27); --color-success: oklch(72% 0.13 150);
+  /* semantic: the wall */
+  --color-paper: var(--concrete-100); --color-paper-2: var(--concrete-200); --color-paper-3: var(--concrete-300);
+  --color-ink: var(--graphite-900); --color-ink-2: var(--graphite-700); --color-muted: var(--graphite-600);
+  --color-rule: var(--concrete-500);
+  --color-frame: var(--canvas);
+  --color-shadow: var(--graphite-950);
+  /* signal: the curtain */
+  --color-accent: var(--curtain-500); --color-accent-ink: var(--canvas); --color-accent-deep: var(--curtain-700); --color-accent-hover: var(--curtain-600);
+  --color-focus: var(--curtain-600);
+  /* field: the poufs (one band) */
+  --color-field: var(--pouf-500); --color-field-2: var(--pouf-600); --color-field-ink: var(--canvas); --color-field-soft: var(--pouf-200);
+  /* material: plywood */
+  --color-ply: var(--ply-500); --color-ply-light: var(--ply-300); --color-ply-dark: var(--ply-700);
+  /* night: the neon room */
+  --color-night: var(--graphite-950); --color-night-ink: var(--neon-warm); --color-night-muted: var(--concrete-300);
+  --color-neon: var(--neon-warm); --color-neon-halo: var(--neon-halo); --color-neon-pink: var(--neon-pink);
+  --color-error: oklch(52% 0.19 27); --color-success: oklch(50% 0.12 150);
 
-  --texture-opacity: 0.06;
-  --font-display: "Oswald", "Arial Narrow", ui-sans-serif, sans-serif; --font-body: "Golos Text", ui-sans-serif, system-ui, sans-serif;
-  --radius-card: 0; --radius-pill: 0; --rule-hair: 1px; --rule-bar: 3px;
-  --shadow-card: 6px 6px 0 var(--color-shadow);
-  --tracking-display: -0.005em; --display-weight: 700;
+  --font-display: "Dela Gothic One", "Arial Black", ui-sans-serif, sans-serif;
+  --font-body: "Golos Text", ui-sans-serif, system-ui, sans-serif;
+  --font-outlier: "Pixelify Sans", ui-monospace, monospace;
+
+  --radius-card: 0; --radius-pill: 999px; --rule-hair: 1px; --rule-bar: 2px;
+  --shadow-hang: 0 22px 34px -20px oklch(17% 0.01 250 / 0.55);
+  --frame-canvas: 10px;
+  --shadow-spine: inset 0 -6px 0 oklch(17% 0.01 250 / 0.18);
+  --shadow-spine-out: inset 0 -6px 0 oklch(17% 0.01 250 / 0.18), 0 18px 24px -14px oklch(17% 0.01 250 / 0.5);
+  --shadow-plank: 0 16px 22px -14px oklch(17% 0.01 250 / 0.6);
 
   /* component */
   --nav-height: 72px;
   --btn-height: 52px;
 }
+@media (max-width: 60rem) { :root { --gutter: 24px; --section-gap-s: 80px; --section-gap: 104px; --section-gap-l: 120px; --frame-canvas: 7px; } }
+@media (max-width: 40rem) { :root { --gutter: 16px; --section-gap-s: 64px; --section-gap: 80px; --section-gap-l: 96px; --gap-columns: 16px; } }

@@ -1,5 +1,38 @@
 [
  {
+  "mode": "redesign",
+  "depth": "full",
+  "scope": "site",
+  "shape": "custom: salon wall",
+  "theme": "custom",
+  "axes": "light/grotesk-heavy/warm",
+  "hero": "salon hang",
+  "nav": "edge-aligned, hides on scroll",
+  "footer": "colophon block",
+  "imagery": "photographs of the room 7, library 3 food stand-ins",
+  "photos": [
+   "yandex-maps: wall, bookshelf, xp-sign, neon-sign, zebra, faces-poster, coffee-shelf"
+  ],
+  "entry": "index.html",
+  "fingerprint": "concrete paper, terracotta signal, pouf-blue band, plywood shelf menu, curtain to neon",
+  "sections": [
+   "Hero salon hang",
+   "Menu bookshelf (tabs)",
+   "Curtain stage to neon",
+   "Hall bento",
+   "Reviews band",
+   "Visit three panels",
+   "Footer"
+  ],
+  "signature": "menu as a plywood bookshelf, pull a spine to open its book",
+  "waived": [
+   "29",
+   "47c"
+  ],
+  "prompt": "Редизайн сайта кофейни Бейджанс по фото интерьера",
+  "date": "2026-10-29"
+ },
+ {
   "shape": "Narrative Workflow",
   "theme": "formwork",
   "axes": "mid/display-condensed/warm",
